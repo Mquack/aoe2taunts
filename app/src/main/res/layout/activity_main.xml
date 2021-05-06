@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+
+            <ImageButton
+                android:id="@+id/iB1"
+                android:tag="yes"
+                android:contentDescription="yes"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:onClick="playSounds"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/yes" />
+
+            <ImageButton
+                android:id="@+id/iB2"
+                android:tag="no"
+                android:contentDescription="no"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/no"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB3"
+                android:tag="food_please"
+                android:contentDescription="food please"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/food_please"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB4"
+                android:tag="wood_please"
+                android:contentDescription="wood please"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/wood_please"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB5"
+                android:tag="gold_please"
+                android:contentDescription="gold please"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/gold_please"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB6"
+                android:tag="stone_please"
+                android:contentDescription="stone please"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/stone_please"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB7"
+                android:tag="ahh"
+                android:contentDescription="ahh"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ahh"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB8"
+                android:tag="all_hail"
+                android:contentDescription="all_hail"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/all_hail"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB9"
+                android:tag="booh"
+                android:contentDescription="booh"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/booh"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB10"
+                android:tag="beat_back_to_age"
+                android:contentDescription="beat you back to age of empires"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/beat_back_to_age"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB11"
+                android:tag="herb_laugh"
+                android:contentDescription="herb laughing"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/herb_laugh"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB12"
+                android:tag="being_rushed"
+                android:contentDescription="ahhh being rushed"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/being_rushed"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB13"
+                android:tag="blame_your_isp"
+                android:contentDescription="blame your isp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/blame_your_isp"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB14"
+                android:tag="start_the_game"
+                android:contentDescription="start the game already"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/start_the_game"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB15"
+                android:tag="dont_point"
+                android:contentDescription="dont point that thing at me"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/dont_point"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB16"
+                android:tag="enemy_sighted"
+                android:contentDescription="enemy sighted"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/enemy_sighted"
+                android:onClick="playSounds"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB17"
+                android:tag="its_good"
+                android:contentDescription="it is good to be the king"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/its_good"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB18"
+                android:tag="i_need_a_monk"
+                android:contentDescription="monk i need a monk"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/i_need_a_monk"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB19"
+                android:tag="long_time_no_siege"
+                android:contentDescription="long time no siege"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/long_time_no_siee"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB20"
+                android:tag="my_granny"
+                android:contentDescription="my granny could scrap better than that"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/my_granny"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB21"
+                android:tag="nice_town"
+                android:contentDescription="nice town ill take it"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/nice_town"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB22"
+                android:tag="quit_touching"
+                android:contentDescription="quit touchin me"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/quit_touching"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB23"
+                android:tag="raiding_party"
+                android:contentDescription="raiding party"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/raiding_party"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB24"
+                android:tag="dadgum"
+                android:contentDescription="dadgum"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/dadgum"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB25"
+                android:tag="smite_me"
+                android:contentDescription="smite me"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/smite_me"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB26"
+                android:tag="the_wonder"
+                android:contentDescription="the wonder the wonder the nooo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/the_wonder"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB27"
+                android:tag="you_play_two_hours"
+                android:contentDescription="you played two hours to lose like this"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/you_play_two_hours"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB28"
+                android:tag="you_should_see"
+                android:contentDescription="you should see the other guy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/you_should_see"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB29"
+                android:tag="roggan"
+                android:contentDescription="roggan"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/roggan"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB30"
+                android:tag="wololo"
+                android:contentDescription="wololo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/wololo"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB31"
+                android:tag="attack_an_enemy"
+                android:contentDescription="attack an enemy now"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/attack_an_enemy"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB32"
+                android:tag="cease_creating_extra_villagers"
+                android:contentDescription="cease creating extra villagers"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/cease_creating_extra_villagers"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB33"
+                android:tag="create_extra_villagers"
+                android:contentDescription="create extra villagers"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/create_extra_villagers"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB34"
+                android:tag="build_a_navy"
+                android:contentDescription="build a navy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/build_a_navy"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB35"
+                android:tag="stop_building_a_navy"
+                android:contentDescription="stop building a navy"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/stop_building_a_navy"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB36"
+                android:tag="wait_to_attack"
+                android:contentDescription="wait for my signal to attack"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/wait_for_my_signal"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB37"
+                android:tag="build_a_wonder"
+                android:contentDescription="build a wonder"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/build_a_wonder"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB38"
+                android:tag="give_me_your_extra"
+                android:contentDescription="give me your extra resources"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/give_me_your_extra"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB39"
+                android:tag="ally"
+                android:contentDescription="ally sound"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/ally"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB40"
+                android:tag="neutral"
+                android:contentDescription="neutral sound"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/neautral"
+                android:onClick="playSounds"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
+
+            <ImageButton
+                android:id="@+id/iB41"
+                android:tag="enemy"
+                android:contentDescription="enemy sound"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/enemy"
+                android:onClick="playSounds"/>
+
+            <ImageButton
+                android:id="@+id/iB42"
+                android:tag="what_age_are_you"
+                android:contentDescription="what age are you in"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="75dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/what_age"
+                android:onClick="playSounds"/>
+
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>
