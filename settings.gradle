@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "aoe2-taunts"
