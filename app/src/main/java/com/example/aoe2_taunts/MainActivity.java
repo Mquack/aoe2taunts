@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.widget.ImageButton;
@@ -16,13 +17,12 @@ import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import java.lang.reflect.Field;
 
 public class MainActivity extends AppCompatActivity {
     Context context = this;
-    MediaPlayer mediaPlayer;
-    int btnAmount = 42;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -35,32 +35,40 @@ public class MainActivity extends AppCompatActivity {
         int width = displayMetrics.widthPixels;
 
         int colm = width/250;
-        int row = btnAmount/colm;
-        if (btnAmount%colm != 0){
-            row += 1;
+        int btnAmount = 42;
+        int rowCount = btnAmount /colm;
+        if (btnAmount %colm != 0){
+            rowCount += 1;
         }
-        Toast.makeText(this, colm + " and " + row, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, colm + " and " + rowCount, Toast.LENGTH_SHORT).show();
         TableLayout mainTableLayout = findViewById(R.id.mainlayout);
-        //TableRow tRow = findViewById(R.id.firstrow);
+
+        TableRow tableRow = new TableRow(context);
+//        TableLayout.LayoutParams tparams = (TableLayout.LayoutParams) tableRow.getLayoutParams();
+        tableRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
+        mainTableLayout.addView(tableRow);
 
         Field[] fields=R.raw.class.getFields();
+        int currentColumn = 0;
         for (Field field : fields) {
-            TableRow rowwy = new TableRow(this);
-            TableLayout.LayoutParams tparams = (TableLayout.LayoutParams) rowwy.getLayoutParams();
-            rowwy.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
-            mainTableLayout.addView(rowwy);
+            if(currentColumn == colm) {
+                tableRow = new TableRow(context);
+                tableRow.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.MATCH_PARENT));
+                mainTableLayout.addView(tableRow);
+                currentColumn = 0;
+            }
+            currentColumn++;
 
-            //tparams.topMargin = 10;
-
-            ImageButton newBtn = new ImageButton(this);
+            ImageButton newBtn = new ImageButton(context);
             newBtn.setTag(field.getName());
             newBtn.setImageResource(this.getResources().getIdentifier(field.getName(), "drawable", context.getPackageName()));
             newBtn.setBackgroundResource(0);
             newBtn.setScaleType(ImageView.ScaleType.FIT_CENTER);
 
             //added to screen
-            rowwy.addView(newBtn);
+            tableRow.addView(newBtn);
             setClickableAnimation(newBtn);
+
             newBtn.setOnClickListener(this::playSounds);
 
             //get factor to multiply with pixel value to get dp's
@@ -73,30 +81,25 @@ public class MainActivity extends AppCompatActivity {
 
             newBtn.setLayoutParams(params);
         }
-
-
     }
     public void playSounds(View view) {
         Resources res = context.getResources();
         int soundId = res.getIdentifier(view.getTag().toString(), "raw", context.getPackageName());
-
-        mediaPlayer = MediaPlayer.create(context, soundId);
-        try{
-            if (mediaPlayer.isPlaying()){
-                mediaPlayer.stop();
-                mediaPlayer.release();
-                mediaPlayer = MediaPlayer.create(context, soundId);
-            }
+        try {
+            MediaPlayer mediaPlayer = MediaPlayer.create(context, soundId);
             mediaPlayer.start();
+            mediaPlayer.setOnCompletionListener(MediaPlayer::release);
         }
-        catch (Exception e){e.printStackTrace();}
+        catch (Exception e) {
+            Log.d("Exception", e.getMessage());
+        }
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void setClickableAnimation(ImageButton imgBtn)
     {
         TypedValue outValue = new TypedValue();
         this.getTheme().resolveAttribute(
-                android.R.attr.actionBarItemBackground, outValue, true);
-        imgBtn.setForeground(getDrawable(outValue.resourceId));
+                android.R.attr.selectableItemBackgroundBorderless, outValue, true);
+        imgBtn.setBackground(ContextCompat.getDrawable(context, outValue.resourceId));
     }
 }
